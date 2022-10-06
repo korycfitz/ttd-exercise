@@ -24,7 +24,7 @@ end
 
 def my_transpose(arr)
     new_arr = []
-    raise "asefjasjgag" if arr.is_a? Array && !arr[0].is_a? Array
+    raise "Error" if arr.is_a? Array && !arr[0].is_a? Array
     (0...arr.length).each do |row|
         subarray=[]
         (0...arr.length).each do |col|
