@@ -19,6 +19,18 @@ def two_sum(arr)
     end
     new_array
 end
-    # combos = arr.combination.to_a
-    # combos.select(|combo| combo.sum==0)
+
 # p two_sum("cat")
+
+def my_transpose(arr)
+    new_arr = []
+    raise "asefjasjgag" if arr.is_a? Array && !arr[0].is_a? Array
+    (0...arr.length).each do |row|
+        subarray=[]
+        (0...arr.length).each do |col|
+             subarray<<arr[col][row]
+        end
+        new_arr<< subarray
+    end
+    new_arr
+end
