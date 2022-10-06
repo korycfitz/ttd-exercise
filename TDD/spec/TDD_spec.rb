@@ -32,3 +32,12 @@ describe "my_transpose" do
         expect{my_transpose([1,2,3]) }.to raise_error 
     end
 end
+
+describe "stock_picker" do 
+    it "accepts an arrany as an argumet" do 
+        expect{stock_picker([5, 1, 3, 6, 10, 0, 0])}.to_not raise_error
+    end
+    it "returns the indicies in an array corresponding to the most profitable day to buy and sell the stock" do 
+        expect(stock_picker([5, 1, 3, 6, 10, 0, 0])).to eql([1,4])
+    end
+end

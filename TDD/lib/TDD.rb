@@ -1,3 +1,4 @@
+require 'byebug'
 def uniq(arr)
     new_hash= {}
 
@@ -24,7 +25,12 @@ end
 
 def my_transpose(arr)
     new_arr = []
-    raise "Error" if arr.is_a? Array && !arr[0].is_a? Array
+    if arr.is_a? Array
+        if !arr[0].instance_of? Array
+            raise "Error"
+        end
+    end
+
     (0...arr.length).each do |row|
         subarray=[]
         (0...arr.length).each do |col|
@@ -33,4 +39,20 @@ def my_transpose(arr)
         new_arr<< subarray
     end
     new_arr
+end
+
+def stock_picker(arr)
+    new_arr = []
+    (0...arr.length).each do |start_idx|
+        (start_idx+1...arr.length).each do |end_idx|
+            if arr[start_idx] < arr[end_idx]
+                debugger
+                buy_day = [arr[start_idx], start_idx]
+                end_day = [arr[end_idx], end_idx]
+                new_arr << buy_day + end_day
+            end
+        end
+    end
+    new_arr.max
+    
 end
