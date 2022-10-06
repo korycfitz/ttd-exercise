@@ -21,6 +21,12 @@ describe "two_sum" do
 
 end
 
-describe "my_transpose"
-
-end
+# describe "my_transpose" do
+#     it "accepts a 2D array as an argument" do
+#         expect{my_transpose([
+#             [0, 1, 2],
+#             [3, 4, 5],
+#             [6, 7, 8]
+#           )}
+#     end
+# end
